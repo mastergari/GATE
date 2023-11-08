@@ -1,0 +1,146 @@
+# QRM PMMA Micro-PET IQ phantom
+/gate/world/daughters/name			IQPhantomWorld
+/gate/world/daughters/insert			cylinder
+/gate/IQPhantomWorld/geometry/setRmax		16.75 mm
+/gate/IQPhantomWorld/geometry/setRmin		0. mm
+/gate/IQPhantomWorld/geometry/setHeight		63. mm
+/gate/IQPhantomWorld/geometry/setPhiStart	0. deg
+/gate/IQPhantomWorld/geometry/setDeltaPhi	360. deg
+/gate/IQPhantomWorld/placement/setTranslation	0. 0. 0. mm
+/gate/IQPhantomWorld/setMaterial		Polyethylene
+/gate/IQPhantomWorld/vis/setColor		yellow
+/gate/IQPhantomWorld/vis/forceWireframe
+/gate/IQPhantomWorld/vis/setVisible		False
+/gate/IQPhantomWorld/attachPhantomSD
+
+/gate/IQPhantomWorld/daughters/name		FillableVolume
+/gate/IQPhantomWorld/daughters/insert		cylinder
+/gate/FillableVolume/geometry/setRmax		15. mm
+/gate/FillableVolume/geometry/setRmin		0. mm
+/gate/FillableVolume/geometry/setHeight		30. mm
+/gate/FillableVolume/geometry/setPhiStart	0. deg
+/gate/FillableVolume/geometry/setDeltaPhi	360. deg
+/gate/FillableVolume/placement/setTranslation	0. 0. -11.5 mm
+/gate/FillableVolume/setMaterial		Water
+/gate/FillableVolume/vis/setColor		blue
+/gate/FillableVolume/vis/forceWireframe
+
+
+# Air spillover region
+/gate/FillableVolume/daughters/name			PMMAspillover_Air
+/gate/FillableVolume/daughters/insert			cylinder
+/gate/PMMAspillover_Air/geometry/setRmax		5. mm
+/gate/PMMAspillover_Air/geometry/setRmin		0. mm
+/gate/PMMAspillover_Air/geometry/setHeight		15. mm
+/gate/PMMAspillover_Air/geometry/setPhiStart		0. deg
+/gate/PMMAspillover_Air/geometry/setDeltaPhi		360. deg
+/gate/PMMAspillover_Air/placement/setTranslation	0. 7.5 -7.5 mm
+/gate/PMMAspillover_Air/setMaterial			Polyethylene
+/gate/PMMAspillover_Air/vis/setColor			yellow
+/gate/PMMAspillover_Air/vis/forceWireframe
+
+/gate/PMMAspillover_Air/daughters/name		spillover_Air
+/gate/PMMAspillover_Air/daughters/insert	cylinder
+/gate/spillover_Air/geometry/setRmax		4. mm
+/gate/spillover_Air/geometry/setRmin		0. mm
+/gate/spillover_Air/geometry/setHeight		14. mm
+/gate/spillover_Air/geometry/setPhiStart	0. deg
+/gate/spillover_Air/geometry/setDeltaPhi	360. deg
+/gate/spillover_Air/placement/setTranslation	0. 0. -0.5 mm    
+/gate/spillover_Air/setMaterial			worldDefaultAir
+/gate/spillover_Air/vis/setColor		white
+/gate/spillover_Air/vis/forceWireframe
+
+# Water spillover region
+/gate/FillableVolume/daughters/name			PMMAspillover_Water
+/gate/FillableVolume/daughters/insert			cylinder
+/gate/PMMAspillover_Water/geometry/setRmax		5. mm
+/gate/PMMAspillover_Water/geometry/setRmin		0. mm
+/gate/PMMAspillover_Water/geometry/setHeight		15. mm
+/gate/PMMAspillover_Water/geometry/setPhiStart		0. deg
+/gate/PMMAspillover_Water/geometry/setDeltaPhi		360. deg
+/gate/PMMAspillover_Water/placement/setTranslation	0. -7.5 -7.5 mm
+/gate/PMMAspillover_Water/setMaterial			Polyethylene
+/gate/PMMAspillover_Water/vis/setColor			yellow
+/gate/PMMAspillover_Water/vis/forceWireframe
+
+/gate/PMMAspillover_Water/daughters/name	spillover_Water
+/gate/PMMAspillover_Water/daughters/insert	cylinder
+/gate/spillover_Water/geometry/setRmax		4. mm
+/gate/spillover_Water/geometry/setRmin		0. mm
+/gate/spillover_Water/geometry/setHeight	14. mm
+/gate/spillover_Water/geometry/setPhiStart	0. deg
+/gate/spillover_Water/geometry/setDeltaPhi	360. deg
+/gate/spillover_Water/placement/setTranslation	0. 0. -0.5 mm    
+/gate/spillover_Water/setMaterial		worldDefaultAir
+/gate/spillover_Water/vis/setColor		blue
+#/gate/spillover_Water/vis/forceWireframe
+
+
+# Hot Rods
+/gate/IQPhantomWorld/daughters/name		Hole1
+/gate/IQPhantomWorld/daughters/insert		cylinder
+/gate/Hole1/geometry/setRmax			0.5 mm
+/gate/Hole1/geometry/setRmin			0. mm
+/gate/Hole1/geometry/setHeight			20. mm
+/gate/Hole1/geometry/setPhiStart		0. deg
+/gate/Hole1/geometry/setDeltaPhi		360. deg
+/gate/Hole1/placement/setTranslation		0. -7. 13.5 mm 
+/gate/Hole1/setMaterial				Water
+/gate/Hole1/vis/setColor			blue
+
+/gate/IQPhantomWorld/daughters/name		Hole2
+/gate/IQPhantomWorld/daughters/insert		cylinder
+/gate/Hole2/geometry/setRmax			1. mm
+/gate/Hole2/geometry/setRmin			0. mm
+/gate/Hole2/geometry/setHeight			20. mm
+/gate/Hole2/geometry/setPhiStart		0. deg
+/gate/Hole2/geometry/setDeltaPhi                360. deg
+/gate/Hole2/placement/setTranslation		6.657395614 -2.163118961 13.5 mm 
+/gate/Hole2/setMaterial				Water
+/gate/Hole2/vis/setColor			blue
+
+/gate/IQPhantomWorld/daughters/name		Hole3
+/gate/IQPhantomWorld/daughters/insert		cylinder
+/gate/Hole3/geometry/setRmax			1.5 mm
+/gate/Hole3/geometry/setRmin			0. mm
+/gate/Hole3/geometry/setHeight			20. mm
+/gate/Hole3/geometry/setPhiStart		0. deg
+/gate/Hole3/geometry/setDeltaPhi		360. deg
+/gate/Hole3/placement/setTranslation		4.114496766 5.663118961 13.5 mm 
+/gate/Hole3/setMaterial				Water
+/gate/Hole3/vis/setColor			blue
+
+/gate/IQPhantomWorld/daughters/name		Hole4
+/gate/IQPhantomWorld/daughters/insert		cylinder
+/gate/Hole4/geometry/setRmax			2. mm
+/gate/Hole4/geometry/setRmin			0. mm
+/gate/Hole4/geometry/setHeight			20. mm
+/gate/Hole4/geometry/setPhiStart		0. deg
+/gate/Hole4/geometry/setDeltaPhi		360. deg
+/gate/Hole4/placement/setTranslation		-4.114496766 5.663118961 13.5 mm 
+/gate/Hole4/setMaterial				Water
+/gate/Hole4/vis/setColor			blue
+
+/gate/IQPhantomWorld/daughters/name		Hole5
+/gate/IQPhantomWorld/daughters/insert		cylinder
+/gate/Hole5/geometry/setRmax			2.5 mm
+/gate/Hole5/geometry/setRmin			0. mm
+/gate/Hole5/geometry/setHeight			20. mm
+/gate/Hole5/geometry/setPhiStart		0. deg
+/gate/Hole5/geometry/setDeltaPhi		360. deg
+/gate/Hole5/placement/setTranslation		-6.657395614 -2.163118961 13.5 mm 
+/gate/Hole5/setMaterial				Water
+/gate/Hole5/vis/setColor			blue
+
+# 20mm diameter disc at end of phantom
+/gate/IQPhantomWorld/daughters/name		Disc
+/gate/IQPhantomWorld/daughters/insert		cylinder
+/gate/Disc/geometry/setRmax			10. mm
+/gate/Disc/geometry/setRmin			0. mm
+/gate/Disc/geometry/setHeight			3. mm
+/gate/Disc/geometry/setPhiStart			0. deg
+/gate/Disc/geometry/setDeltaPhi			360. deg
+/gate/Disc/placement/setTranslation		0. 0. 25. mm 
+/gate/Disc/setMaterial				Water
+/gate/Disc/vis/setColor				blue

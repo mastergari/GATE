@@ -1,0 +1,30 @@
+# 111111111111111111111111111111111111111111111111111111111111111111111111111111111
+/gate/source/addSource				cylinderSource gps
+/gate/source/cylinderSource/gps/particle	{particleType}
+
+/control/strdoif {particleType} == gamma	/control/multiply A {A} 0.8852404    # A * branching ratio = A * (0.0000104 + 0.885 + 0.00023)
+/control/strdoif {particleType} == gamma	/gate/source/cylinderSource/gps/energytype UserSpectrum
+/control/strdoif {particleType} == gamma	/gate/source/cylinderSource/gps/setSpectrumFile data/energy_spectrum_Tc99m.txt
+/control/strdoif {particleType} == gamma	/gate/source/cylinderSource/setForcedHalfLife 21625.848 s
+/control/strdoif {particleType} == ion		/gate/source/cylinderSource/gps/ion 43 99 0 142.6832
+/control/strdoif {particleType} == ion		/gate/source/cylinderSource/setForcedUnstableFlag true
+/control/strdoif {particleType} == ion		/gate/source/cylinderSource/useDefaultHalfLife
+
+/gate/source/cylinderSource/setActivity		{A} {unitA}
+/gate/source/cylinderSource/gps/pos/type	Volume
+/gate/source/cylinderSource/gps/pos/shape	Cylinder
+/gate/source/cylinderSource/gps/pos/radius	15. mm
+/gate/source/cylinderSource/gps/pos/halfz	26.5 mm
+/gate/source/cylinderSource/gps/pos/centre	0. 0. 0. mm
+/gate/source/cylinderSource/gps/ang/type	iso
+/gate/source/cylinderSource/attachTo		IQPhantomWorld
+
+/gate/source/cylinderSource/gps/Forbid		PMMAspillover_Air
+/gate/source/cylinderSource/gps/Forbid		PMMAspillover_Water
+/gate/source/cylinderSource/gps/Forbid		spillover_Air
+/gate/source/cylinderSource/gps/Forbid		spillover_Water
+/gate/source/cylinderSource/gps/Forbid		IQPhantomWorld
+
+/gate/source/cylinderSource/dump		1
+
+/gate/source/list
